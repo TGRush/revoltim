@@ -3,7 +3,7 @@
 }
 
 /* smaller chat avatar */
-.csvICB .avatar {
+[class^="MessageBase__MessageInfo-sc-"] > [class^="IconBase-sc-"] {
    width: 24px;
    height: 24px;
 }
@@ -47,7 +47,7 @@
    font-size: 9px;
 }
 
-/* i forgot what this does lmao */
+/* rounded reactions */
 [class^="sc-jSgvzq"] {
    border-radius: 50px;
 }
@@ -71,6 +71,19 @@ textarea#message {
    margin-left: -10px;
    padding-left: 10px;
    margin-top: 5px;
+}
+
+/* adds borders after server list and channel list */
+[class^="ServerSidebar__ServerBase-sc-"],
+[class^="Base-sc-"] {
+   background: var(--secondary-background);
+   border-right: 1px solid var(--primary-header);
+}
+
+/* remove the settings icon in the server list (unneeded imo and also allows a nicer removal of the shadow) */
+[class^="Base-sc-"] > [class^="ItemContainer-sc-"],
+[class^="Base-sc-"] > [class^="Shadow-sc-"] {
+   display: none;
 }
 
 /* recolors the members bar to merge in better with the chat backgorund */
