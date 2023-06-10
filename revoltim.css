@@ -2,10 +2,22 @@
    --message-box-padding: 8px 8px 8px 0;
 }
 
-/* smaller chat avatar */
-[class^="MessageBase__MessageInfo-sc-"] > [class^="IconBase-sc-"] {
-   width: 24px;
-   height: 24px;
+/* adds borders after server list and channel list */
+[class^="Base-sc-"],
+[class^="ServerSidebar__ServerBase-sc-"] {
+   border-right: 1px solid var(--primary-header);
+   background: var(--secondary-background);
+}
+
+/* unround the channels list */
+[class^="ServerSidebar__ServerBase-sc-"] {
+   border-radius: 0px;
+}
+
+/* remove the settings icon in the server list (unneeded imo and also allows a nicer removal of the shadow) */
+[class^="Base-sc-"] > [class^="ItemContainer-sc-"],
+[class^="Base-sc-"] > [class^="Shadow-sc-"] {
+   display: none;
 }
 
 /* transparent header (still keeping blur tho) */ 
@@ -14,27 +26,15 @@
    backdrop-filter: blur(13px);
 }
 
+/* smaller chat avatar */
+[class^="MessageBase__MessageInfo-sc-"] > [class^="IconBase-sc-"] {
+   width: 24px;
+   height: 24px;
+}
+
 /* smaller padding above/below messages */
 [class^="MessageBase-sc-"] {
    padding: 0.05rem;
-}
-
-/* move the message options slightly up a little to not obscure the message */
-[class^="sc-iBPTik"] {
-   top: -27px;
-}
-
-/* moves the message slightly to the left for the smaller chat avatar */
-[class^="MessageBase__MessageInfo-sc-"] {
-   margin-right: -10px;
-}
-
-/* message bubble */
-[class^="MessageBase__MessageContent-sc-"] {
-   background-color: var(--tertiary-background);
-   border-radius: 18px;
-   padding: 10px 13px 10px 13px;
-   flex-grow: 0;
 }
 
 /* smaller username */
@@ -47,9 +47,27 @@
    font-size: 9px;
 }
 
+/* moves the message slightly to the left for the smaller chat avatar */
+[class^="MessageBase__MessageInfo-sc-"] {
+   margin-right: -10px;
+}
+
 /* rounded reactions */
 [class^="sc-jSgvzq"] {
    border-radius: 50px;
+}
+
+/* message bubble */
+[class^="MessageBase__MessageContent-sc-"] {
+   background-color: var(--tertiary-background);
+   border-radius: 18px;
+   padding: 10px 13px 10px 13px;
+   flex-grow: 0;
+}
+
+/* move the message options slightly up a little to not obscure the message */
+[class^="sc-iBPTik"] {
+   top: -27px;
 }
 
 /* transparent bottom box */
@@ -64,26 +82,47 @@
    margin-bottom: -7px;
 }
 
+/* typing indicator */
+[class^="TypingIndicator__Base-sc-"] > div {
+   background: transparent;
+}
+
+[class^="TypingIndicator__Base-sc-"] > div > .avatars {
+   margin-left: 13px;
+}
+
+[class^="TypingIndicator__Base-sc-"] > div > .usernames {
+   margin-left: 6px;
+   padding-left: 5px;
+   padding-right: 5px;
+   background: var(--message-box);
+   border-radius: 8px;
+}
+
+/* modified file upload preview/emoji selection */
+[class^="AutoComplete__Base-sc-"] {
+   margin-left: 52px;
+   margin-right: 58px;
+}
+
+[class^="AutoComplete__Base-sc-"] > div,
+[class^="AutoComplete__Base-sc-"] > div > button {
+   border-radius: 18px;
+}
+
+[class^="FilePreview__Container-sc-"] {
+   margin-left: 52px;
+   margin-right: 58px;
+   border-radius: 18px;
+}
+
 /* signal-like messagebar */
 textarea#message {
    background: var(--message-box);
-   border-radius: 50px;
+   border-radius: 18px;
    margin-left: -10px;
    padding-left: 10px;
    margin-top: 5px;
-}
-
-/* adds borders after server list and channel list */
-[class^="ServerSidebar__ServerBase-sc-"],
-[class^="Base-sc-"] {
-   background: var(--secondary-background);
-   border-right: 1px solid var(--primary-header);
-}
-
-/* remove the settings icon in the server list (unneeded imo and also allows a nicer removal of the shadow) */
-[class^="Base-sc-"] > [class^="ItemContainer-sc-"],
-[class^="Base-sc-"] > [class^="Shadow-sc-"] {
-   display: none;
 }
 
 /* recolors the members bar to merge in better with the chat backgorund */
