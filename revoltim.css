@@ -116,6 +116,14 @@
   border-radius: 8px;
 }
 
+/* reply notice */
+[class^="ReplyBar__Base-sc-"] {
+  padding: 0px 10px;
+  margin-left: 52px;
+  margin-right: 58px;
+  border-radius: 16px;
+}
+
 /* modified file upload preview/emoji selection */
 [class^="AutoComplete__Base-sc-"] {
   margin-left: 52px;
