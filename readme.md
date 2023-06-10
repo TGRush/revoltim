@@ -13,3 +13,21 @@ use this theme override to import the correct colors and (hopefully latest and u
 # screenshot
 
 wip
+
+# Options
+
+## Gradients
+
+To apply gradients, you have to change the following value from the top of the CSS:
+
+```
+:root {
+  --chat-bg: var(--primary-background);
+}  
+```
+
+Replace `var(--primary-background)` with one of the following gradients:
+```
+linear-gradient(to top, #eb3349, #f45c43)
+```
+
