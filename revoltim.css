@@ -3,10 +3,23 @@
 }
 
 /* adds borders after server list and channel list */
-[class^="Base-sc-"],
+[class^="Base-sc-"] > .list,
 [class^="ServerSidebar__ServerBase-sc-"] {
    border-right: 1px solid var(--primary-header);
    background: var(--secondary-background);
+}
+
+/* replacement server swoosh ~ not working currently */
+[class^="SwooshWrapper-sc-"] > svg > path:nth-child(2),
+[class^="SwooshWrapper-sc-"] > svg > path:nth-child(3),
+[class^="SwooshWrapper-sc-"] > svg > rect {
+    display: none;
+}
+
+[class^="SwooshWrapper-sc-"] > svg > path:first-child {
+   fill: var(--primary-header);
+   transform: translateX(.8px) scale(.9);
+   transform-origin: center;
 }
 
 /* unround the channels list */
@@ -59,7 +72,7 @@
 
 /* message bubble */
 [class^="MessageBase__MessageContent-sc-"] {
-   background-color: var(--tertiary-background);
+   background-color: var(--message-box);
    border-radius: 18px;
    padding: 10px 13px 10px 13px;
    flex-grow: 0;
