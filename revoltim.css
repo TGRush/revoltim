@@ -39,6 +39,20 @@
   background: var(--primary-header);
 }
 
+/* "jump to new messages" bar */
+[class^="JumpToBottom__Bar-sc-"]:first-child {
+  margin: 10px 16px 0 16px;
+}
+
+/* "jump to latest message" bar */
+[class^="JumpToBottom__Bar-sc-"]:nth-child(2) {
+  margin: 0 16px 0 16px;
+}
+
+[class^="JumpToBottom__Bar-sc-"]>div {
+  border-radius: 14px;
+}
+
 /* smaller chat avatar */
 [class^="MessageBase__MessageInfo-sc-"]>[class^="IconBase-sc-"] {
   width: 24px;
