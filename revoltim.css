@@ -102,6 +102,7 @@
 /* typing indicator */
 [class^="TypingIndicator__Base-sc-"]>div {
   background: transparent;
+  backdrop-filter: none;
 }
 
 [class^="TypingIndicator__Base-sc-"]>div>.avatars {
