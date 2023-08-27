@@ -39,20 +39,6 @@
   background: var(--primary-header);
 }
 
-/* "jump to new messages" bar */
-[class^="JumpToBottom__Bar-sc-"]:first-child {
-  margin: 10px 16px 0 16px;
-}
-
-/* "jump to latest message" bar */
-[class^="JumpToBottom__Bar-sc-"]:nth-child(2) {
-  margin: 0 16px 0 16px;
-}
-
-[class^="JumpToBottom__Bar-sc-"]>div {
-  border-radius: 14px;
-}
-
 /* smaller chat avatar */
 [class^="MessageBase__MessageInfo-sc-"]>[class^="IconBase-sc-"] {
   width: 24px;
@@ -89,6 +75,7 @@
   background-color: var(--message-box);
   border-radius: 18px;
   padding: 10px 13px 10px 13px;
+  margin-right: 12px;
   flex-grow: 0;
 }
 
@@ -169,4 +156,9 @@ textarea#message {
 [class^="MemberList__ListCategory-sc-"],
 [class^="SidebarBase__GenericSidebarBase-sc-"] {
   background: var(--primary-background);
+}
+
+/* padding fix for channels which you cannot send in */
+[class^="MessageBox__Blocked-sc"] {
+  padding-left: 12px;
 }
