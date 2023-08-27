@@ -162,3 +162,14 @@ textarea#message {
 [class^="MessageBox__Blocked-sc"] {
   padding-left: 12px;
 }
+
+/* DMs Sidebar Color & Border */
+[class^="SidebarBase__GenericSidebarBase-sc"] {
+  background-color: var(--secondary-background);
+  border-right: 1px solid var(--primary-header);
+}
+
+/* Settings Sidebar Border */
+[class^="_settings"] > [class^="_sidebar"] {
+  border-right: 1px solid var(--primary-header);
+}
